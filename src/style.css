@@ -288,8 +288,8 @@ main {
 }
 
 .product-cart__img {
-    max-height: 42.5%;
-    max-width: 70%;
+    height: 42.5%;
+    max-width: 80%;
     display: block;
     margin: 0 auto 16px auto;
 }
@@ -343,13 +343,13 @@ main {
     position: relative;
 }
 
-.flip-menu a:nth-child(1) {
+.flip-menu__arrow_direction_left {
     position: absolute;
     top: 8px;
     left: 14px;
 }
 
-.flip-menu a:nth-child(2) {
+.flip-menu__arrow_direction_right {
     position: absolute;
     top: 8px;
     right: 14px;

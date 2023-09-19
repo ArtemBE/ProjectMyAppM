@@ -211,7 +211,7 @@ const phone = [
 {
     name: 'Смартфон Samsung Galaxy S23 Ultra 256 ГБ',
     color: 'begie',
-    memory: 0,
+    memory: 256,
     producer: 'Samsung',
     img: './images/всеТовары/phone/SamsungGalaxys23Ultra_begie.png',
     price: 108990,

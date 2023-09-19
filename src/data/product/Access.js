@@ -57,3 +57,6 @@ const access = [
     price: 249,
 },
 ]
+access.forEach(item=>item.category='access');
+addKey(access);
+export default access;

@@ -129,3 +129,7 @@ const audio = [
     price: 1294,
 },
 ]
+
+audio.forEach(item=>item.category='audio');
+addKey(audio);
+export default audio;

@@ -1,3 +1,4 @@
+import addKey from "../../scripts/key";
 const tablet = [
 {
     name: 'Планшет Apple iPad (2021) Wi-Fi 256 ГБ',
@@ -96,3 +97,6 @@ const tablet = [
     price: 15590,
 },
 ]
+tablet.forEach(item=>item.category='tablet');
+addKey(tablet);
+export default tablet;
