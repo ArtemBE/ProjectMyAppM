@@ -1,28 +1,38 @@
 import addKey from "../scripts/key";
 const categories = [
 {
-    id: 0,
-    name: 'Телефоны',
-    img: './images/категории/smartphone_smart.svg'
+    key: 0,
+    name: 'phone',
+    ruName: 'Смартфоны',
+    characteristics: ['color', 'producer', 'memory'],
+    img: './images/категории/smartphone_smart.svg',
 },
 {
-    id: 1,
-    name: 'Планшеты',
+    key: 1,
+    name: 'tablet',
+    ruName: 'Планшеты',
+    characteristics: ['color', 'producer', 'memory'],
     img: './images/категории/tabletchart_118080.svg'
 },
 {
-    id: 2,
-    name: 'Аудио',
+    key: 2,
+    name: 'audio',
+    ruName: 'Аудио',
+    characteristics: ['color', 'producer', 'type'],
     img: './images/категории/Speaker_icon.svg'
 },
 {
-    id: 3,
-    name: 'Аксессуары',
+    key: 3,
+    name: 'access',
+    ruName: 'Аксессуары',
+    characteristics: ['color', 'type'],
     img: './images/категории/Office_-22.svg'
 },
 {
-    id: 4,
-    name: 'Ноутбуки',
+    key: 4,
+    name: 'laptop',
+    ruName: 'Ноутбуки',
+    characteristics: ['color', 'producer', 'memory'],
     img: './images/категории/32officeicons.svg'
 },
 ];

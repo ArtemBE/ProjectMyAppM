@@ -25,7 +25,7 @@ const access = [
     name: 'Prime Line 7239 USB Type C',
     color: 'white',
     type: 'USB кабель',
-    img: './images/всеТовары/access/PrimeLine7239USB-TypeC_white.png',
+    img: './images/всеТовары/access/PrimeLine7239USB-TypeC_white.jpg',
     price: 1090,
 },
 {
@@ -39,7 +39,7 @@ const access = [
     name: 'Redline USB micro USB',
     color: 'black',
     type: 'USB кабель',
-    img: './images/всеТовары/access/Redline-usb-microusb_black.png',
+    img: './images/всеТовары/access/Redline-usb-microusb_black.jpg',
     price: 790,
 },
 {
@@ -53,7 +53,7 @@ const access = [
     name: 'vipe USB lightning MFI',
     color: 'blue',
     type: 'USB кабель',
-    img: './images/всеТовары/access/vipe-usb-lightning-MFI-blue.png',
+    img: './images/всеТовары/access/vipe-usb-lightning-MFI-blue.jpg',
     price: 249,
 },
 ]

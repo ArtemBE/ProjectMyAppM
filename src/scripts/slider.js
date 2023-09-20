@@ -12,7 +12,7 @@ const input2 = document.body.querySelector('.filters-price-input__right-input');
                               Number(input.value)<=139990;
  */
 
-export default function Slider(doc, dispatch){
+export default function Slider(doc, dispatch, minPrice, maxPrice){
     const polz = doc.body.querySelector('.filters-price-slider');
     const left = polz.querySelector('.filters-price-slider__left-handler');
     const right = polz.querySelector('.filters-price-slider__right-handler');
@@ -24,9 +24,14 @@ export default function Slider(doc, dispatch){
 
     let clampedLeft = false;
     let clampedRight = false;
-    let lastX;
-    const minPrice = 3990;
-    const maxPrice = 139990;
+    let lastX;/* 
+    minPrice = 3990;
+    maxPrice = 139990; */
+    input1.value = minPrice;
+    input2.value = maxPrice;
+    left.style.left=0;
+    right.style.right=0;
+
     function move(e){
         let r = parseInt(getComputedStyle(right).right);  //позиция правого handler
         let l = parseInt(getComputedStyle(left).left);    //позиция левого handler

@@ -89,7 +89,13 @@ main {
     width: 210px;
     height: 210px;
     border-radius: 35px;
-    border: 1.75px solid #CFCFCF;
+    border: 2px solid #CFCFCF;
+    box-sizing: border-box;
+}
+
+.categories__item:hover {
+    border: 2px solid black;
+    cursor: pointer;
 }
 
 .categories__item img {
@@ -288,7 +294,7 @@ main {
 }
 
 .product-cart__img {
-    height: 42.5%;
+    max-height: 42.5%;
     max-width: 80%;
     display: block;
     margin: 0 auto 16px auto;

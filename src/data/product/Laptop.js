@@ -1,4 +1,5 @@
 import addKey from "../../scripts/key";
+
 const laptop = [
 {
     name: 'Ноутбук Acer Nitro 5 AN515-46-R1WM NH.',
@@ -93,7 +94,7 @@ const laptop = [
     color: 'grey',
     memory: 256,
     producer: 'Lenovo',
-    img: './images/всеТовары/laptop/LenovoL3_grey.png',
+    img: './images/всеТовары/laptop/LenovoL3_grey.jpg',
     price: 64620,
 },
 {
@@ -125,7 +126,7 @@ const laptop = [
     color: 'blue',
     memory: 512,
     producer: 'Realme',
-    img: './images/всеТовары/laptop/realmeBook14core-i5_blue.png',
+    img: './images/всеТовары/laptop/realmeBook14core-i5_blue.jpg',
     price: 49990,
 },
 ]

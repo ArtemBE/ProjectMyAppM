@@ -53,7 +53,7 @@ const tablet = [
     color: 'grey',
     memory: 64,
     producer: 'Samsung',
-    img: './images/всеТовары/tablet/SamsungGalaxyTabA7_grey.png',
+    img: './images/всеТовары/tablet/SamsungGalaxyTabA7_grey.jpg',
     price: 13990,
 },
 {

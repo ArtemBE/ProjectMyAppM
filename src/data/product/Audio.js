@@ -27,7 +27,7 @@ const audio = [
 {
     name: 'HONOR Беспроводные наушники HONOR Choice Earbuds X5',
     color: 'white',
-    type: 'Наушники вкладыши',
+    type: 'Внутриканальные наушники',
     producer: 'Honor',
     img: './images/всеТовары/audio/HonorChoiseEarbudsX5_white.jpg',
     price: 1768,
@@ -77,7 +77,7 @@ const audio = [
     color: 'black',
     type: 'Внутриканальные наушники',
     producer: 'JBL',
-    img: './images/всеТовары/audio/JBL-Tune115TWS_black.png',
+    img: './images/всеТовары/audio/JBL-Tune115TWS_black.jpg',
     price: 5990,
 },
 {
@@ -85,7 +85,7 @@ const audio = [
     color: 'black',
     type: 'Внутриканальные наушники',
     producer: 'JBL',
-    img: './images/всеТовары/audio/JBL-vide200TWS_black.jpg',
+    img: './images/всеТовары/audio/JBL-vide200TWS_black.png',
     price: 3990,
 },
 {
@@ -107,7 +107,7 @@ const audio = [
 {
     name: 'Беспроводные наушники Xiaomi Redmi Buds 4 Lite',
     color: 'white',
-    type: 'Внутриканальные наушники',
+    type: 'Наушники вкладыши',
     producer: 'Xiaomi',
     img: './images/всеТовары/audio/RedmiBuds4Lite_white.png',
     price: 1299,
@@ -117,13 +117,13 @@ const audio = [
     color: 'white',
     type: 'Внутриканальные наушники',
     producer: 'Xiaomi',
-    img: './images/всеТовары/audio/XiaomiMiTrueWirelessEarbuds_white.png',
+    img: './images/всеТовары/audio/XiaomiMiTrueWirelessEarbuds_white.jpg',
     price: 1790,
 },
 {
     name: 'Беспроводные наушники Xiaomi Redmi Buds 3 Global, USB Type-C',
     color: 'white',
-    type: 'Внутриканальные наушники',
+    type: 'Наушники вкладыши',
     producer: 'Xiaomi',
     img: './images/всеТовары/audio/XiaomiRedmiBuds3white.png',
     price: 1294,
