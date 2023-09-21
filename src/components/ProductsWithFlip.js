@@ -27,7 +27,7 @@ export default function ProductsWithFlip() {
                 .filter(item=>(matchFilter(item, choise, state)))
                 .slice((page-1)*6, page*6)
                 .map(item=>
-                <ProductCard img={item.img} price={item.price} name={item.name} key={item.key}/>)}
+                <ProductCard item={item} key={item.key}/>)}
             </div>
             <Flip/>
         </div>

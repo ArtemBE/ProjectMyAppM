@@ -8,7 +8,8 @@ import variants from "../scripts/Variants"; */
 import { composeWithDevTools } from 'redux-devtools-extension';
 import matchFilter from "../scripts/match";
 
-const defaultState = {
+
+const defaultStateProducts = {
     priceFloor: 3990,
     priceCeiling: 139990,
     characteristics: ['color', 'memory', 'producer'],
@@ -19,7 +20,13 @@ const defaultState = {
         color: [],
         type: [],
     },
-    productPage: 1
+    productPage: 1,
+}
+
+const defaultState = {
+    ...defaultStateProducts,
+    doc: document,
+    basket: new Map(),
 }
 const reducer = function(state = defaultState, act){
     switch(act.type){
@@ -61,6 +68,21 @@ const reducer = function(state = defaultState, act){
             return {...state, productPage: state.productPage + act.payload}
         case 'to1stPage':
             return {...state, productPage: 1}
+        case 'setDefaultState':
+            return {...state, ...defaultStateProducts};
+        case 'addProduct':
+            return (
+                state.basket.has(act.payload)?
+                {...state, basket: state.basket.set(act.payload, state.basket.get(act.payload)+1)}:
+                {...state, basket: state.basket.set(act.payload, 1)}
+            ) 
+        case 'removeProduct':
+            if(state.basket.get(act.payload)===1) state.basket.delete(act.payload);
+            return (
+                state.basket.get(act.payload)>1?
+                {...state, basket: state.basket.set(act.payload, state.basket.get(act.payload)-1)}:
+                {...state, basket: state.basket}
+            ) 
         default:
             console.log('default'); 
             return state;

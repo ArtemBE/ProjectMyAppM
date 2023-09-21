@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
     return (
-        <footer>
+        <footer id="contacts__anchor">
             <div className="container footer-container">
                 <div className="footer-links">
                     <a href="https://www.youtube.com/"><img src="./images/footer2/vk.svg" alt="Картинка ушла за хлебом"/></a>

@@ -17,6 +17,9 @@ export default function Content_categories({doc}) {
     useEffect(()=>{
         Slider(doc, dispatch, floor, ceiling);
     }, [floor, ceiling]);
+    useEffect(()=>{
+        dispatch({type: 'setDefaultState'});
+    }, []);
     return (
         <main>
             <div className="container">
