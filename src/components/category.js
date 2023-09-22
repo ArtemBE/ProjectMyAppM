@@ -10,7 +10,7 @@ import { maxPrice, minPrice } from '../scripts/MaxMin';
 import form from '../scripts/format';
 const cats = [access, audio, laptop, phone, tablet];
 
-export default function Category({name, img, doc}) {
+export default function Category({name, img}) {
     const dispatch = useDispatch();
     function oncl(){
         dispatch({

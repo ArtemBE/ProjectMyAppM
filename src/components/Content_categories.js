@@ -9,8 +9,9 @@ import tablet from '../data/product/Tablet'; */
 import {minPrice, maxPrice} from '../scripts/MaxMin'
 import { useDispatch, useSelector } from 'react-redux';
 
-export default function Content_categories({doc}) {
+export default function Content_categories() {
     const dispatch = useDispatch();
+    const doc = useSelector(state=>state.doc);
     const cat=useSelector(state=>state.currentCategory);
     let floor = minPrice(cat); 
     let ceiling = maxPrice(cat); 
@@ -24,7 +25,7 @@ export default function Content_categories({doc}) {
         <main>
             <div className="container">
                 <div className="categories">
-                    {categoties.map(item=><Category doc={doc} name={item.name} img={item.img} key={item.key}/>)}
+                    {categoties.map(item=><Category name={item.name} img={item.img} key={item.key}/>)}
                 </div>
                 <span className="current-category">Планшеты</span>
                 <div className="products-and-filters">

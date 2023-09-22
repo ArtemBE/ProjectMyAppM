@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: roboto;
+    font-weight: 400;
+}
+
+.notCard {
+    /*position: fixed;*/
+}
+
+.cardAndBack {
+    position: relative;
+    width: 100%;
+    top: 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 600;
+    padding-bottom: auto;
+}
+
+.card .close-img {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    transform: rotate(45deg);
+}
+
+.card .close-img:hover {
+    cursor: pointer;
+}
+
+.card {
+    padding: 100px 80px;
+    border: 1px solid;
+    width: 70%;
+    /*margin: 0 auto;*/
+    border-radius: 16px;
+    top: 0px;
+    background-color: #FFF;
+
+    position: relative;
+    margin: 10% auto;
+}
+
+.card .head {
+    padding-bottom: 40px;
+}
+
+.card .head__label {
+    font-size: 32px;
+}
+
+.card .head__free {
+    font-size: 32px;
+    border-radius: 15px;
+    background: #32C89B;
+    width: 150px;
+    height: 30px;
+    color: #FFF;
+    font-size: 12px;
+    margin-top: 20px;
+    padding: 7px 0;
+    text-align: center;
+}
+
+.card .image-and-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .image {
+    width: 380px;
+    height: 380px;
+    padding-top: 65px;
+    border-radius: 12px;
+    border: 1px solid #E2E2E8;
+}
+
+.card .image img {
+    display: block;
+    height: 250px;
+    margin: auto;
+}
+
+.card .info__price {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.card .info__basket {
+    font-size: 20px;
+    padding: 14px 60px;
+    border-radius: 10px;
+    background: #E7E8FF;
+    margin: 15px 0 24px 0;
+}
+
+.card .info__basket:hover {
+    cursor: pointer;
+}
+
+.card .info__basket_not-empty {
+    display: flex;
+    gap: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.card .info__color-label {
+    margin-bottom: 14px;
+}
+
+.card .info__color {
+    border-radius: 10px;
+    border: 1px solid;
+    margin-right: 12px;
+}
+
+.card .description {
+    margin-top: 30px;
+}
+
+.card .description__head {
+    font-size: 32px;
+    margin-bottom: 60px;
+}

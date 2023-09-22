@@ -27,6 +27,8 @@ const defaultState = {
     ...defaultStateProducts,
     doc: document,
     basket: new Map(),
+    fullCard: false,
+    scroll: 0,
 }
 const reducer = function(state = defaultState, act){
     switch(act.type){
@@ -71,20 +73,27 @@ const reducer = function(state = defaultState, act){
         case 'setDefaultState':
             return {...state, ...defaultStateProducts};
         case 'addProduct':
+            console.log(state.basket.get(act.payload));
             return (
                 state.basket.has(act.payload)?
                 {...state, basket: state.basket.set(act.payload, state.basket.get(act.payload)+1)}:
                 {...state, basket: state.basket.set(act.payload, 1)}
-            ) 
+            )
         case 'removeProduct':
+            console.log(state.basket.get(act.payload));
             if(state.basket.get(act.payload)===1) state.basket.delete(act.payload);
             return (
                 state.basket.get(act.payload)>1?
                 {...state, basket: state.basket.set(act.payload, state.basket.get(act.payload)-1)}:
                 {...state, basket: state.basket}
             ) 
+        case 'openCard':
+            console.log('scr1 ' + window.pageYOffset);
+            return {...state, fullCard: act.payload, scroll: window.pageYOffset};
+        case 'closeCard':
+            return {...state, fullCard: false};
         default:
-            console.log('default'); 
+            //console.log('default'); 
             return state;
     }
 }
