@@ -12,26 +12,26 @@ export default function Header() {
                 <nav className="header-navigation">
                     <NavLink to="/">
                         <div className="header-navigation__item header-navigation__item_catalog">
-                            <img src="./images/навигация/diagram_list.svg" alt="Картинка ушла за хлебом"/>
+                            <img src="./images/навигация/diagram_list.svg" alt="Failed to load"/>
                             <span>КАТАЛОГ ТОВАРОВ</span>
                         </div>
                     </NavLink>
                     <NavLink to="/about">
                         <div className="header-navigation__item header-navigation__item_about">
-                            <img src="./images/навигация/person_question.svg" alt="Картинка ушла за хлебом"/>
+                            <img src="./images/навигация/person_question.svg" alt="Failed to load"/>
                             <span>О НАС</span>
                         </div>
                     </NavLink>
                     
                     <a href="#contacts__anchor">
                         <div className="header-navigation__item header-navigation__item_contacts">
-                            <img src="./images/навигация/phone-symbol.svg" alt="Картинка ушла за хлебом"/>
+                            <img src="./images/навигация/phone-symbol.svg" alt="Failed to load"/>
                             <span>КОНТАКТЫ</span>
                         </div>
                     </a>
                     <NavLink to="/basket">
                         <div className="header-navigation__item header-navigation__item_basket">
-                            <img src="./images/навигация/shoppingcart_80945.svg" alt="Картинка ушла за хлебом"/>
+                            <img src="./images/навигация/shoppingcart_80945.svg" alt="Failed to load"/>
                             <span>КОРЗИНА</span>
                         </div>
 

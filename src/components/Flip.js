@@ -14,12 +14,12 @@ export default function Flip() {
     let choise = useSelector(state=>state.choise);
     return (
         <div className="flip-menu">
-            <img src="./images/mini/next1.svg" alt="Картинка ушла за хлебом" 
+            <img src="./images/mini/next1.svg" alt="Failed to load" 
             className='flip-menu__arrow flip-menu__arrow_direction_left'
             onClick={()=>dispatch({type: 'changePage', payload: -1})}
             hidden={page===1}/>
             {page + "/" + Math.ceil(cat.filter(item=>matchFilter(item, choise, state)).length/6)}
-            <img src="./images/mini/next2.svg" alt="Картинка ушла за хлебом" 
+            <img src="./images/mini/next2.svg" alt="Failed to load" 
             className='flip-menu__arrow flip-menu__arrow_direction_right'
             onClick={()=>dispatch({type: 'changePage', payload: 1})}
             hidden={page===Math.ceil(cat.filter(item=>matchFilter(item, choise, state)).length/6)}/>

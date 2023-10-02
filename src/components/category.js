@@ -34,7 +34,7 @@ export default function Category({name, img}) {
             onClick={oncl} 
             className={"categories__item categories__item_" + name}
         >
-            <img src={img} alt="Картинка ушла за хлебом" />
+            <img src={img} alt="Failed to load" />
             <span>{form(name)}</span>
         </div>
     )

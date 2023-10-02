@@ -22,7 +22,7 @@ export default function Variant({char, variant}) {
                 id={"filters-item__variant_" + 
                 char + "_" + variant} />
             {char==='color' && 
-            <img src={"./images/colors/" + variant + ".svg"} alt="Картинка ушла за хлебом" />}
+            <img src={"./images/colors/" + variant + ".svg"} alt="Failed to load" />}
             <label htmlFor={"filters-item__variant_" + 
             char + "_" + variant}>{variant}</label>
         </div>

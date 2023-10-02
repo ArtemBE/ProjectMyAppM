@@ -22,7 +22,7 @@ export default function CardFull() {
     }}>
         <img onClick={onclose} 
             src='./images/mini/plus.svg' 
-            alt='Картинка ушла за хлебом' 
+            alt='Failed to load' 
             className='close-img'></img>
         <div className="head">
             <div className="head__label">
@@ -34,7 +34,7 @@ export default function CardFull() {
         </div>
         <div className="image-and-info">
             <div className="image">
-                <img src={item.img} alt="Картинка ушла за хлебом" />
+                <img src={item.img} alt="Failed to load" />
             </div>
             <div className="info">
                 <div className="info__price">
@@ -44,12 +44,12 @@ export default function CardFull() {
                     <div class="info__basket info__basket_not-empty">
                         <img onClick={()=>dispatch({type: 'removeProduct', payload: item})} 
                             src="./images/mini/MinusBB.svg" 
-                            alt="Картинка ушла за хлебом"
+                            alt="Failed to load"
                         />
                         <span>{count}</span>
                         <img onClick={()=>dispatch({type: 'addProduct', payload: item})}
                             src="./images/mini/PlusBB.svg" 
-                            alt="Картинка ушла за хлебом"
+                            alt="Failed to load"
                         />
                     </div>:
                     <div onClick={()=>dispatch({type: 'addProduct', payload: item})}
@@ -66,7 +66,7 @@ export default function CardFull() {
                     <img className="info__color" 
                         src={"./images/colors/color_" + 
                         item.color+".svg"} 
-                        alt="Картинка ушла за хлебом" 
+                        alt="Failed to load" 
                     />
                 </div>
             </div>
