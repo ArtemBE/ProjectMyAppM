@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 
 export default function BasketItem({item}) {
-    let count = useSelector(state=>state.basket.get(item));
+    let count = useSelector(state=>state.basket.get(JSON.stringify(item)));
     const dispatch = useDispatch();
     useEffect(()=>{
         console.log("Корзина изменилась");

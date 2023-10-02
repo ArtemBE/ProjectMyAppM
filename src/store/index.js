@@ -30,34 +30,40 @@ const defaultState = {
     fullCard: false,
     scroll: 0,
 }
-const reducer = function(state = defaultState, act){
-    switch(act.type){
+for(let i=0; i<localStorage.length;i++){
+    defaultState.basket.set(localStorage.key(i), Number(localStorage.getItem(localStorage.key(i))));
+}
+
+console.log(defaultState.basket);
+const reducer = function(state = defaultState, {type, payload}){
+    let obj;
+    switch(type){
         case 'changePriceFloor':
-            console.log('change f'); 
-            return {...state, priceFloor: act.payload, productPage: 1}
+            //console.log('change f'); 
+            return {...state, priceFloor: payload, productPage: 1}
         case 'changePriceСeiling':
-            console.log('change c'); 
-            return {...state, priceCeiling: act.payload, productPage: 1}
+            //console.log('change c'); 
+            return {...state, priceCeiling: payload, productPage: 1}
         case 'addVariant':
-            let c = act.payload.char;
-            let v = act.payload.variant;
+            let c = payload.char;
+            let v = payload.variant;
             if(state.choise[c].includes(v)) return state;
             let res = {...state, choise: {...state.choise, [c]: state.choise[c].concat(v)}, productPage: 1}
-            console.log(res.choise.color);
+            //console.log(res.choise.color);
             return res;
         case 'removeVariant':
-            let c1 = act.payload.char;
-            let v1 = act.payload.variant;
+            let c1 = payload.char;
+            let v1 = payload.variant;
             return  {...state, choise: {...state.choise, [c1]: state.choise[c1].filter(item=>item!==v1)}, productPage: 1}
         case 'changeCurrentCategory':
-            return {...state, currentCategory: act.payload, choise: {
+            return {...state, currentCategory: payload, choise: {
                 memory: [],
                 producer: [],
                 color: [],
                 type: [],
             },}
         case 'changePage':
-            if(state.productPage<2 && act.payload<0) return state;
+            if(state.productPage<2 && payload<0) return state;
             if(state.productPage>=
                 Math.ceil(state
                     .currentCategory
@@ -66,30 +72,37 @@ const reducer = function(state = defaultState, act){
                         ceiling: state.priceCeiling,
                     }))
                     .length/6)
-                &&act.payload>0) return state; 
-            return {...state, productPage: state.productPage + act.payload}
+                &&payload>0) return state; 
+            return {...state, productPage: state.productPage + payload}
         case 'to1stPage':
             return {...state, productPage: 1}
         case 'setDefaultState':
             return {...state, ...defaultStateProducts};
         case 'addProduct':
-            console.log(state.basket.get(act.payload));
+            obj=JSON.stringify(payload);
+            localStorage.setItem(obj, 
+                localStorage.getItem(obj)-(-1))
             return (
-                state.basket.has(act.payload)?
-                {...state, basket: state.basket.set(act.payload, state.basket.get(act.payload)+1)}:
-                {...state, basket: state.basket.set(act.payload, 1)}
+                state.basket.has(obj)?
+                {...state, basket: state.basket.set(obj, state.basket.get(obj)+1)}:
+                {...state, basket: state.basket.set(obj, 1)}
             )
         case 'removeProduct':
-            console.log(state.basket.get(act.payload));
-            if(state.basket.get(act.payload)===1) state.basket.delete(act.payload);
+            //console.log(state.basket.get(payload));
+            obj=JSON.stringify(payload);
+            localStorage.getItem(obj)>1?
+            localStorage.setItem(obj, 
+                localStorage.getItem(obj)-1):
+            localStorage.removeItem(obj);
+            if(state.basket.get(obj)===1) state.basket.delete(obj);
             return (
-                state.basket.get(act.payload)>1?
-                {...state, basket: state.basket.set(act.payload, state.basket.get(act.payload)-1)}:
+                state.basket.get(obj)>1?
+                {...state, basket: state.basket.set(obj, state.basket.get(obj)-1)}:
                 {...state, basket: state.basket}
             ) 
         case 'openCard':
-            console.log('scr1 ' + window.pageYOffset);
-            return {...state, fullCard: act.payload, scroll: window.pageYOffset};
+            //console.log('scr1 ' + window.pageYOffset);
+            return {...state, fullCard: payload, scroll: window.pageYOffset};
         case 'closeCard':
             return {...state, fullCard: false};
         default:

@@ -5,8 +5,8 @@ export default function CardFull() {
     const dispatch = useDispatch();
     let scroll = useSelector(state=>state.scroll);
     let item = useSelector(state=>state.fullCard);
-    let has = useSelector(state=>state.basket.has(item));
-    let count = useSelector(state=>state.basket.get(item));
+    let has = useSelector(state=>state.basket.has(JSON.stringify(item)));
+    let count = useSelector(state=>state.basket.get(JSON.stringify(item)));
     const card = useRef();
     const onclose = () => {
         dispatch({type: 'closeCard'});

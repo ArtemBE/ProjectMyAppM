@@ -17,7 +17,7 @@ export default function BasketDetails() {
                 Итого: 
                 <span>{' '+Array.from(basket.keys())
                                 .reduce((acm, item)=>acm+basket
-                                .get(item)*item.price, 0)}
+                                .get(item)*JSON.parse(item).price, 0)}
                 </span>
                 ₽
             </div>

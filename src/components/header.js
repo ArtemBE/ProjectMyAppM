@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
     return (
@@ -34,6 +34,7 @@ export default function Header() {
                             <img src="./images/навигация/shoppingcart_80945.svg" alt="Картинка ушла за хлебом"/>
                             <span>КОРЗИНА</span>
                         </div>
+
                     </NavLink>
                     
                 </nav>

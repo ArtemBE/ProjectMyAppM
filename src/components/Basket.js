@@ -18,7 +18,7 @@ export default function Basket() {
                 </div>:
                 <div className="basket-items-and-details">
                     <div className="basket-items">
-                        {Array.from(basketKeys).map(item=><BasketItem key={item.key} item={item}/>)}
+                        {Array.from(basketKeys).map(item=><BasketItem key={JSON.parse(item).key} item={JSON.parse(item)}/>)}
                     </div>
                     <BasketDetails/>
                 </div>
